@@ -29,17 +29,8 @@ namespace webPrueba.Controllers
 
         public ActionResult Prueba()
         {
-            string hola = "";
-            string Concepto = CalculaConcepto();
             return View();
         }
-
-
-        private string CalculaConcepto()
-        {
-
-            string Concepto = string.Empty;
-            return "Cambio";
-        }
+      
     }
 }
