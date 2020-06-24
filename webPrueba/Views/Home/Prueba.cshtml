@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Prueba";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string Componente = "Azul";
+}
+
+<h2>Prueba</h2>
+
+<h3>Segunda linea</h3>
+
+<h2>@Componente</h2>
+
+@for (int ii = 0; ii <= 10; ii++)
+{
+    <h2>@string.Format("Número {0}", ii)</h2>
+}
