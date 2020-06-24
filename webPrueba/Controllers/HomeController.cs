@@ -30,8 +30,16 @@ namespace webPrueba.Controllers
         public ActionResult Prueba()
         {
             string hola = "";
-            string Concepto = string.Empty;
+            CalculaConcepto();
             return View();
+        }
+
+
+        private void CalculaConcepto()
+        {
+
+            string Concepto = string.Empty;
+            Concepto = "Cambio";
         }
     }
 }
