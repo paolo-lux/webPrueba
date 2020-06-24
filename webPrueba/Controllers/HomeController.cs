@@ -30,6 +30,7 @@ namespace webPrueba.Controllers
         public ActionResult Prueba()
         {
             string hola = "";
+            string Concepto = string.Empty;
             return View();
         }
     }
