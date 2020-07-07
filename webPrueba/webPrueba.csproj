@@ -1930,8 +1930,8 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Prueba.cshtml" />
-    <Content Include="Views\Symptom\Edit.cshtml" />
     <Content Include="Views\Symptom\Index.cshtml" />
+    <Content Include="Views\Symptom\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
