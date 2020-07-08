@@ -8,6 +8,7 @@ using webPrueba.Models;
 
 namespace webPrueba.Controllers
 {
+    [Authorize]
     public class SymptomController : Controller
     {
         // GET: Symptom
