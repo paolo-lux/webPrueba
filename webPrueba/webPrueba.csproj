@@ -178,6 +178,7 @@
     <Compile Include="Clases\ResultViewModel.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MeditionController.cs" />
     <Compile Include="Controllers\SymptomController.cs" />
     <Compile Include="DataAccess\Catalogs\daSymptom.cs" />
     <Compile Include="DataAccess\Security\daSecurity.cs" />
@@ -186,6 +187,7 @@
     </Compile>
     <Compile Include="Helpers\Security.cs" />
     <Compile Include="Models\AccountVM.cs" />
+    <Compile Include="Models\Meditions.cs" />
     <Compile Include="Models\SymptomVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -1991,6 +1993,7 @@
     <Content Include="Views\Symptom\Index.cshtml" />
     <Content Include="Views\Symptom\Edit.cshtml" />
     <Content Include="Views\Account\LogOn.cshtml" />
+    <Content Include="Views\Medition\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

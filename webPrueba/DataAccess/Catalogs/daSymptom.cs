@@ -54,6 +54,38 @@ namespace webPrueba.DataAccess.Catalogs
             return res;
         }
 
+        public static List<Revision> GetSymptomsAllRev()
+        {
+            List<Revision> res = new List<Revision>();
+
+            DataTable table = new DataTable();
+            using (var con = new SqlConnection(@"Data Source = (localdb)\MSSQLLocalDB;Integrated Security=true;Initial Catalog = Clase2002DB;"))
+            using (var cmd = new SqlCommand("spSymptomGetAll", con))
+            using (var da = new SqlDataAdapter(cmd))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                da.Fill(table);
+
+                foreach (DataRow dr in table.Rows)
+                {
+                    res.Add(new Revision
+                    {
+                        Id = int.Parse(dr["Id"].ToString()),
+                        SymptomName = dr["SymptomName"].ToString(),
+                        SynptomDescription = dr["SynptomDescription"].ToString(),
+                        Measure = decimal.Parse(dr["Measure"].ToString()),
+                        URLImage = dr["URLImage"].ToString(),
+                        Active = (dr["Active"].ToString().ToUpper() == "TRUE" || dr["Active"].ToString() == "1" ? true : false),
+                        Presente = false
+                    });
+                }
+
+            }
+
+
+
+            return res;
+        }
 
 
         public static SymptomVM GetSymptomsById(int Id)
@@ -100,5 +132,11 @@ namespace webPrueba.DataAccess.Catalogs
 
             return res;
         }
+
+
+
+
+
+
     }
 }

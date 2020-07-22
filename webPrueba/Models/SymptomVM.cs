@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Runtime;
 using System.Web;
 
 namespace webPrueba.Models
@@ -26,6 +27,14 @@ namespace webPrueba.Models
 
         [Display(Name = "Activo")]
         public bool Active { get; set; }
+
     }
 
+    /// <summary>
+    /// Clase Auxiliar para evaluar los Sintomas
+    /// </summary>
+    public class Revision : SymptomVM
+    {
+        public bool Presente { get; set; }
+    }
 }
