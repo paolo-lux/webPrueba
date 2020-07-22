@@ -14,7 +14,16 @@ namespace webPrueba.Controllers
         public ActionResult Index()
         {
             Meditions model = new Meditions();
-            model.lSintomas =  daSymptom.GetSymptomsAllRev();
+            model.lSintomas = daSymptom.GetSymptomsAllRev();
+            return View(model);
+        }
+
+
+        [HttpPost]
+        public ActionResult Index(Meditions model)
+        {
+
+            //Al entrar a este paso ya se lee la información que se creo
             return View(model);
         }
     }
